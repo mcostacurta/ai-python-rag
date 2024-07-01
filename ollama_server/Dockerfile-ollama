@@ -1,0 +1,11 @@
+FROM ollama/ollama
+
+EXPOSE 11434
+
+VOLUME /root/.ollama
+
+RUN apt-get update --fix-missing && apt-get install -y --fix-missing curl
+
+EXPOSE 11434
+
+ENTRYPOINT ["ollama", "serve"]

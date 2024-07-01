@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  ollama:
+    container_name: ollama
+    build: 
+      context: .
+      dockerfile: Dockerfile-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           device_ids: ['all']
+    #           capabilities: [gpu]
+volumes:
+  ollama:
+  

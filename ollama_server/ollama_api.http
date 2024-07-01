@@ -1,0 +1,35 @@
+### Listing Models
+GET http://localhost:11434/api/tags
+
+### Model info
+POST http://localhost:11434/api/show
+Content-Type: application/json
+
+{
+  "model": "mistral"
+}
+
+### Pull a New Model
+POST http://localhost:11434/api/pull
+Content-Type: application/json
+
+{
+  "model": "mistral"
+}
+
+
+### Load a new Model
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "mistral"
+}
+
+### DElete model
+DELETE http://localhost:11434/api/delete
+Content-Type: application/json
+
+{
+  "model": "mistral"
+}

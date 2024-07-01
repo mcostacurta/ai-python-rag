@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  app:
+    container_name: python-rag
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    environment:
+      - CHROMA_PATH=chroma
+      - DOCS_PATH=data
+      - OLLAMA_SERVER_URL=http://ollama.dev:11434
+      - MODEL=mistral
+    volumes:
+      - .:/app
+    network_mode: host
